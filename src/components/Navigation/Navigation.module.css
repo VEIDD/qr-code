@@ -1,0 +1,11 @@
+.navigation {
+	display: flex; 
+	justify-content: center;
+	gap: 50px;
+}
+
+.generate, .scan, .generate_history, .scan_history {
+	color: black;
+	text-decoration: none;
+	font-size: 40px;
+}
