@@ -5,21 +5,16 @@ import { SCAN_DATA } from "../../constans";
 export const QrCodeScanner = () => {
   const [text, setText] = useState("");
 
-  let result = [{ text: "6asdawsdasd" }];
+  const scanHandler = (result) => {
+    setText(result[0].rawValue)
 
-  const test = () => {
-    setText(result[0].text);
 		const prev_data = JSON.parse(localStorage.getItem(SCAN_DATA) || '[]')
 
 		localStorage.setItem(
 			SCAN_DATA, 
-			JSON.stringify([...prev_data, result[0].text])
+			JSON.stringify([...prev_data, result[0].rawValue])
 		)
-  };
-  const scanHandler = (result) => {
-    // setText(result[0].rawValue)
-		// localStorage.setItem(SCAN_DATA, rawValue[0].text)
-    console.log(result);
+
   };
 
   return (
@@ -33,9 +28,6 @@ export const QrCodeScanner = () => {
       />
       <div className={styles.p}>
         <p className={styles.text}>{text}</p>
-        <button className={styles.btn} onClick={test}>
-          Test
-        </button>
       </div>
     </div>
   );

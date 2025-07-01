@@ -5,17 +5,6 @@
 	flex-direction: column;
 }
 
-.btn {
-	width: 200px;
-	height: 70px;
-	font-size: 30px;
-	border: none;
-	padding: 20px;
-	border-radius: 5px;
-	color: tomato;
-	font-weight: 700;
-}
-
 .p {
 	margin-left: 70px;
 	width: 420px;
